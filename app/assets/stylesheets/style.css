@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background:url(/app/assets/images/orangefondo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #FFF;
+    font-family: 'Dosis', sans-serif;
+}
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap:15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+}
+.contenedor > div,
+.contenedor .encabezado,
+.contenedor .contenido,
+.contenedor .footer {
+    background: #111;
+    padding: 20px;
+    border-radius: 4px;
+}
+.contenedor .encabezado{
+    background:url(/app/assets/images/mmup.png);
+    color:rgb(5, 5, 5);
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 25px;
+    text-align: center;
+    height: 250px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+nav {
+    background: #f78d02;
+    overflow: hidden;
+}
+header nav ul{
+    list-style: none;
+    
+
+}
+header nav ul li{
+    float: left;
+    margin: 10px;
+
+}
+header nav ul li a{
+    padding: 10px 10px;
+    display: block;
+    color:black;
+    text-decoration: none;
+
+}
+header nav ul li a:hover {
+    background: rgb(245, 111, 2);
+
+}
+.contenedor .contenido {
+    grid-column: span 2;
+    line-height: 1.5em;
+    
+
+}
+.destacado {
+    color: rgb(250, 4, 127);
+}
+.contenedor .caja1,
+.contenedor .caja2 {
+    background: rgb(245, 111, 2);
+    color: #000;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.contenedor .caja1{
+    background-image: url(/app/assets/images/1.JPG);
+    background-repeat: no-repeat;  
+    color: #FAB107;  
+    
+}
+
+.contenedor .caja2{
+    background-image: url(/app/assets/images/2.JPG);
+    background-repeat: no-repeat;  
+    color: #FAB107;  
+}
+.contenedor .caja3{
+    background-image: url(/app/assets/images/3.JPG);
+    background-repeat: no-repeat;  
+    color: #FAB107;  
+}
+.contenedor .caja4{
+    background-image: url(/app/assets/images/4.JPG);
+    background-repeat: no-repeat;  
+    color: #FAB107;  
+}
+.contenedor .footer {
+    background: rgb(245, 111, 2);
+    color: #000;
+    text-align: center;
+    grid-column: span 3;
+}
+.columna {
+    column-count: 3;
+}
+@media screen and (max-width: 768px) {
+    body {
+        background: white;      
+    }
+    .contenedor .encabezado{
+        background-color: #FAB107;
+        color: black;
+    }
+    nav {
+        display: none;
+    }
+    .contenedor .contenido {
+        grid-column: 1/-1;
+    }
+    .contenedor .barralateral {
+        grid-column: 1/-1;
+    }
+    .contenedor .caja1 {
+        grid-column: span 2;
+    }
+    .columna {
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    body {
+        background: black;      
+    }
+    nav {
+        display: none;
+    }
+    .contenedor .encabezado{
+        background-color: #DE0BB0;
+        color: white;
+    }
+    .contenedor .caja1 {
+        grid-column: 1/-1;
+    }
+    .contenedor .caja2 {
+        grid-column: 1/-1;
+    }
+    .columna {
+        column-count: 1;
+    }
+}

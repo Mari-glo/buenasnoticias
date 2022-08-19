@@ -10,6 +10,7 @@ module Buenasnoticias
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+    config.assets.path << rails.root.join ("app", "assets", "images")
 
     # Configuration for the application, engines, and railties goes here.
     #
@@ -18,5 +19,6 @@ module Buenasnoticias
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    
   end
 end
