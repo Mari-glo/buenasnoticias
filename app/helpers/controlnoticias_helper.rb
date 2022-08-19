@@ -1,0 +1,2 @@
+module ControlnoticiasHelper
+end
